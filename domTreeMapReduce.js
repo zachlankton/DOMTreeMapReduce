@@ -1,7 +1,5 @@
 (function DOMTreeMapReduce() {
 
-    window.DOMTree = DOMTree;
-
     // This code completely stolen from James Sinclair's Blog
     // https://jrsinclair.com/articles/2019/functional-js-traversing-trees-with-recursive-reduce/
     const DOMTree = {
@@ -23,6 +21,8 @@
         })
     };
 
+    window.DOMTree = DOMTree;
+    
     function hasChildren(node) {
         return (typeof node === 'object') &&
             (typeof node.childNodes !== 'undefined') &&
